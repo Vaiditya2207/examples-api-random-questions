@@ -1,0 +1,154 @@
+req - 1 
+
+{
+    "content":{
+        "topic": "Dynamic programming",
+        "difficulty": "Very Hard"
+    }
+}
+ans -1 
+
+{
+    "question": "Given an m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path. You can only move either down or right at any point in time. Write a function `minPathSum(grid)` that takes a 2D list of integers as input and returns the minimum sum of the path.",
+    "test-case-1": [
+        "[[1,3,1],[1,5,1],[4,2,1]]",
+        7
+    ],
+    "test-case-2": [
+        "[[1,2,3],[4,5,6],[7,8,9]]",
+        21
+    ],
+    "time": "O(m*n)",
+    "topic": "Dynamic programming",
+    "difficulty": "Very Hard",
+    "basicApproach": "Use dynamic programming to store the minimum path sum at each cell. Initialize the top-left cell with the value in the grid. For each cell, update it with the minimum sum by adding the current cell value to the minimum of the values from the cell above or the cell to the left. Continue this process until you reach the bottom-right cell.",
+    "additionalInfo": "Ensure your solution handles edge cases such as a grid with only one row or one column. Consider both time and space complexity when designing your solution."
+}
+
+req - 2
+
+{
+    "content":{
+        "topic": "Greedy Algorithm",
+        "difficulty": "Very Hard"
+    }
+}
+
+ans - 2
+
+{
+    "question": "You are given an integer array `nums` representing the cost of items and an integer `k`, representing the number of items you must buy. Your task is to minimize the total cost of buying exactly `k` items. However, there is a special offer: for every two items you buy, you get a third item for free (the free item is the cheapest among the three). Write a function to return the minimum total cost to buy exactly `k` items.\n\nConstraints:\n- `1 <= nums.length <= 10^5`\n- `1 <= nums[i] <= 10^4`\n- `1 <= k <= nums.length`",
+    "test-case-1": [
+        [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        3,
+        6
+    ],
+    "test-case-2": [
+        [
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60"
+        ],
+        5,
+        140
+    ],
+    "time": "O(n log n)",
+    "topic": "Greedy Algorithm",
+    "difficulty": "Very Hard",
+    "basicApproach": "First, sort the array in ascending order. To leverage the special offer, prioritize picking items in groups of three where you always include the cheapest item for free. Use a greedy approach to ensure that you minimize the cost by always considering the cheapest available items first.",
+    "additionalInfo": "This problem requires careful handling of indices and ensuring that the number of items picked does not exceed `k`. Consider edge cases where `k` is less than 3 or very close to the length of the array."
+}
+
+req - 3
+
+{
+    "content":{
+        "topic": "Mix of binary seacrh and sorting",
+        "difficulty": "Very Hard"
+    }
+}
+
+ans - 4
+
+{
+    "question": "You are given an array of integers `nums` where each element represents the height of a histogram bar, and an integer `k`. Your task is to find the maximum area of a rectangle in the histogram that can be formed by at least `k` consecutive bars. Return the maximum area possible.",
+    "test-case-1": [
+        [
+            2,
+            1,
+            5,
+            6,
+            2,
+            3
+        ],
+        3,
+        10
+    ],
+    "test-case-2": [
+        [
+            2,
+            3,
+            4,
+            3,
+            2,
+            5
+        ],
+        4,
+        9
+    ],
+    "time": "O(n log n)",
+    "topic": "Mix of Binary Search and Sorting",
+    "difficulty": "Very Hard",
+    "basicApproach": "First, sort the array to ensure consecutive bars can be easily identified. Then, for each possible starting point of `k` consecutive bars, use binary search to efficiently find the minimum height within this segment. Calculate the maximum area possible by considering the width as `k` and the minimum height found via binary search.",
+    "additionalInfo": "This problem requires careful consideration of how to efficiently find the maximum area rectangle in the histogram that meets the `k` consecutive bars condition. Edge cases where `k` is larger than the histogram's length should also be handled gracefully."
+}
+
+req - 5
+
+{
+    "content":{
+        "topic": "Mix of various programming topics",
+        "difficulty": "Very Hard"
+    }
+}
+
+ans - 5
+
+{
+    "question": "You are given an array of integers `nums` and an integer `k`. Find the maximum sum of a subarray that contains at least `k` elements. Return the maximum sum possible.",
+    "test-case-1": [
+        [
+            1,
+            -2,
+            1,
+            1,
+            -1,
+            2
+        ],
+        3,
+        4
+    ],
+    "test-case-2": [
+        [
+            -1,
+            -2,
+            -3
+        ],
+        2,
+        -3
+    ],
+    "time": "O(n log n)",
+    "topic": "Dynamic Programming, Sliding Window, Binary Search",
+    "difficulty": "Very Hard",
+    "basicApproach": "First, use a sliding window approach to find the maximum sum of subarrays of length `k`. Then, employ binary search on the possible maximum sums to efficiently find the maximum sum with at least `k` elements.",
+    "additionalInfo": "This problem combines concepts from dynamic programming, sliding window technique, and binary search to achieve an efficient solution. Edge cases where `k` is larger than the array's length or where all numbers are negative should be handled gracefully."
+}
